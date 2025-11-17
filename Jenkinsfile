@@ -21,8 +21,8 @@ pipeline {
         stage('3. Deploy New Container') {
             steps {
 
-                sh 'docker stop kopika || true'
-                sh 'docker rm kopika || true'
+                sh 'docker stop kopika-web || true'
+                sh 'docker rm kopika-web || true'
 
                 sh 'docker run -d --name kopika-web -p 80:80 my-web-app'
             }
